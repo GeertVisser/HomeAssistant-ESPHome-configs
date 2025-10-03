@@ -1,0 +1,68 @@
+esphome:
+  name: segment-lcd
+  friendly_name: Grove Segment LCD
+
+esp32:
+  board: seeed_xiao_esp32c6
+  framework:
+    type: esp-idf
+    # version: latest
+    # platform_version: 55.03.31
+
+i2c:
+  sda: GPIO22
+  scl: GPIO23
+  scan: true
+
+display:
+  - platform: lcd_grove_rgb
+    dimensions: 16x2 # optional, default: 16x2
+    address: 0x3e # optional, default: 0x3e
+    backlight: 0x62 # optional, default: 0x62
+    
+    lambda: |-
+      it.printf(0, 0, "Temp: %.1f C", id(current_temperature).state); // \u00B0C = °C
+      it.printf(0, 1, "Humi: %.1f %%", id(current_humidity).state);   // %% = %
+
+sensor:
+  - platform: homeassistant
+    id: current_temperature
+    entity_id: sensor.gas_sensor_bme68x_temperature
+    internal: true
+
+  - platform: homeassistant
+    id: current_humidity
+    entity_id: sensor.gas_sensor_bme68x_humidity
+    internal: true
+
+# switch:
+#   - platform: lcd_grove_rgb
+#     name: "Backlight"
+#     icon: "mdi:restart"
+external_components:
+  - source: github://GeertVisser/esphome-lcd_grove_rgb
+    components: [ lcd_grove_rgb ]
+    refresh: 0s
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  - platform: esphome
+    password: ""
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Segment LCD Fallback Hotspot"
+    password: "QSz5BZpTDscw"
+
+captive_portal:
+    

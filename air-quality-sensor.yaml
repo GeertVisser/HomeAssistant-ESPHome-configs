@@ -1,0 +1,61 @@
+esphome:
+  name: air-quality-sensor
+  friendly_name: Air Quality Sensor SGP40
+
+esp32:
+  board: seeed_xiao_esp32s3
+  variant: esp32s3
+  framework:
+    type: esp-idf
+    # from https://github.com/pioarduino/platform-espressif32/releases
+    # version: 5.4.2
+    # platform_version: 54.03.21-2 
+
+i2c:
+ sda: GPIO5
+ scl: GPIO6
+ scan: true
+
+# sensor
+sensor:
+  - platform: sgp4x
+    id: sgp40
+    voc:
+      name: "VOC Index"
+    nox:
+      name: "NOx Index"
+      id: nox
+
+#deep_sleep:
+#  id: deep_sleep_component
+#  run_duration: 30s
+#  sleep_duration: 5min
+##  wakeup_pin:
+##    number: GPIO5
+##    mode: INPUT_PULLUP
+##    inverted: true
+
+# Enable logging
+logger:
+  level: ERROR
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "XqK2/vwtsCfq/DKKV7jwbBTQxkliD9ZoD/F/JK42bvQ="
+
+ota:
+  - platform: esphome
+    password: "ca5e4c6d8384e6a562eb034740d73504"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Air-Qual-Sensor Fallback Hotspot"
+    password: "UEfBV5z963lt"
+
+captive_portal:
+        
