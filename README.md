@@ -31,7 +31,8 @@ gas-sensor.yaml
 - seeed_xiao_esp32c6: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
 - seeed BME680: https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/
 - 3v3, gnd, D4, D5
-- bme68x_bsec2_i2c setup (bme680 setup is also an option)
+- Component used: https://esphome.io/components/sensor/bme68x_bsec2/
+  - bme68x_bsec2_i2c setup (bme680 / bme680_bsec_i2c setup is also an option)
 
 grove-segment-lcd.yaml
 - Display 16x2:
@@ -58,7 +59,9 @@ TBD-1:
   - status?  
 - seeed_xiao_esp32c6: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
 - seeed Mini I2C Motor Driver: https://wiki.seeedstudio.com/Grove-Mini_I2C_Motor_Driver_v1.0/
+  - 2x DRV8830
 - 3v3, gnd, D4, D5
+- Uses this component??? https://esphome.io/components/fan/hbridge/
 - Uses this library:
   - https://github.com/Seeed-Studio/Drv8830_Motor_Driver
   - alternative lib: https://github.com/adafruit/Adafruit_DRV8830
