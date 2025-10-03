@@ -18,17 +18,17 @@ air-quality-sensor.yaml
 
 gas-sensor.yaml
 - seeed_xiao_esp32c6: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
-- seeed BME680: [https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41/](https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/)
+- seeed BME680: https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/
 - 3v3, gnd, D4, D5
 - bme68x_bsec2_i2c setup (bme680 setup is also an option)
 
 grove-segment-lcd.yaml
 - seeed_xiao_esp32c6: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
-- Grove-16x2 LCD: [https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41/](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)
+- Grove-16x2 LCD:https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/
 - 3v3, gnd, D4, D5
 - Uses this library: https://github.com/AlekEagle/esphome-lcd_grove_rgb
 
 temp-sensor.yaml
 - seeed_xiao_esp32s3: https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
-- AHT20 Temp sensor: [[https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41/](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/)](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/)
+- AHT20 Temp sensor: https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/
 - 3v3, gnd, D4, D5
