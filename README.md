@@ -3,7 +3,8 @@ Collection of my ESPHome configurations that I use in HomeAssistant
 
 
 for all: 
-- Latest Home Assistant / ESPHome
+- Making use of Home Assistant / ESPHome
+- seeed Grove modules
 - esp-idf framework
 - Stock hardware
 - Soldered headers on esp-32 devices
@@ -24,11 +25,11 @@ gas-sensor.yaml
 
 grove-segment-lcd.yaml
 - seeed_xiao_esp32c6: https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/
-- Grove-16x2 LCD:https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/
+- seeed Grove-16x2 LCD:https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/
 - 3v3, gnd, D4, D5
 - Uses this library: https://github.com/AlekEagle/esphome-lcd_grove_rgb
 
 temp-sensor.yaml
 - seeed_xiao_esp32s3: https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
-- AHT20 Temp sensor: https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/
+- seeed AHT20 Temp sensor: https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/
 - 3v3, gnd, D4, D5
